@@ -17,6 +17,7 @@ using std::hardware_destructive_interference_size; //<new>
 // x86-64│L1_CACHE_BYTES│L1_CACHE_SHIFT│__cacheline_aligned│...
 constexpr std::size_t hardware_destructive_interference_size = 64;
 #endif
+
 struct bin
 {
     alignas(hardware_destructive_interference_size) atomic<int> count;

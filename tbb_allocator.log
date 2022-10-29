@@ -1,0 +1,4 @@
+Memory Allocation without Cache Alignment
+Serial: 18.2036, Parallel: 9.92747, Speed-up: 1.83366
+Memory Allocation with Cache Alignment
+Serial: 17.896, Parallel: 6.72941, Speed-up: 2.65937
