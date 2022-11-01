@@ -3,6 +3,7 @@
 #include <vector>
 #include <thread>
 #include <iostream>
+#include <sstream>
 
 using sout_t = tbb::enumerable_thread_specific<std::stringstream>;
 void alloc_thread_per_node(hwloc_topology_t topo, sout_t &sout)
