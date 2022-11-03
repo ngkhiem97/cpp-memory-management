@@ -6,14 +6,14 @@
 
 CXX		 = g++
 CXXFLAGS = -Wall -g -O0 -std=c++14 -pthread
-TARGET	 = tbb_allocator 
-SRC	 = tbb_allocator.cc
+TARGET	 = numa 
+SRC	 = numa.cc
 INCLUDE	 = -I/opt/tbb-2021.3.0/include
 LIB	     = -L/opt/tbb-2021.3.0/lib/intel64/gcc4.8
 TBB      = -ltbb
 
 $(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) $(LIB) $(SRC) -o $(TARGET) $(TBB)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) $(LIB) $(SRC) -o $(TARGET) $(TBB) -lhwloc
 
 clean:
 	rm -f $(TARGET)
